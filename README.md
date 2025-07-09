@@ -88,6 +88,19 @@ The Medical Diagnostic Guardian operates as a dual-level AI system designed to o
 - Audit logging for all system interactions
 - Time-limited access sessions with automatic logout
 
+### Enhanced Privacy Architecture
+
+To address the critical challenges of data anonymization and PHI handling in rural healthcare settings, we've implemented a **Federated Privacy-Preserving Architecture**. This solution ensures both HIPAA compliance and clinical utility while protecting sensitive patient information.
+
+Key components:
+
+- Multi-stage data processing with PHI isolation and clinical abstraction
+- Differential privacy techniques to prevent re-identification
+- Federated learning approach that keeps sensitive data distributed
+- Secure enclaves for authorized PHI access when medically necessary
+
+For technical details and implementation strategies, see our [Data Privacy Enhancement Strategy](./docs/data_privacy_enhancement.md) document.
+
 ### Regulatory Compliance
 
 **Medical Standards Adherence**
