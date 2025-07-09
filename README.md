@@ -57,6 +57,17 @@ The Medical Diagnostic Guardian operates as a dual-level AI system designed to o
 
 ### Technical Implementation
 
+**LLM Strategy: Federated & Specialized Models**
+
+To ensure performance, cost-effectiveness, and privacy, the system avoids monolithic, general-purpose AI. Instead, we employ a "mixture of experts" approach using specialized, open-source models.
+
+- **Model Foundation:** We use a base open-source LLM (e.g., Llama-3-8B, MediTron-7B) known for strong reasoning capabilities.
+- **Task-Specific Fine-Tuning:** The base model is fine-tuned into smaller, highly-optimized expert models for specific clinical tasks like patient triage and differential diagnosis.
+- **Performance Optimization:** Models are quantized to 4-bit precision, drastically reducing computational load and enabling real-time inference on cost-effective, on-premises hardware.
+- **Hosting:** Models are self-hosted within the local healthcare facility's infrastructure, aligning with our federated architecture, minimizing latency, and eliminating external API dependencies and costs.
+
+For more details, see our [LLM Strategy](./docs/llm_strategy.md) document.
+
 **Data Processing Pipeline:**
 
 1. Patient symptom collection and standardization
